@@ -26,7 +26,9 @@ namespace autotests.Page
         }
 
         public void VerifyResultBySelectedOption()
-        {
+        { 
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+                wait.Until(ExpectedConditions.)
             Assert.IsTrue(resultElement.Text.Contains(dropdown.SelectedOption.Text), "Selected day is not correct");
         }
 

@@ -32,6 +32,7 @@ namespace PageObject.Test
         [TestCase("a", "b", "NaN", TestName = "a plus b = NaN")]
         public static void TestSumCalculation(string firstInput, string secondInput, string result)
         {
+            page.NavigateToPage();
             page.EnterFirstInput(firstInput);
             page.EnterSecondInput(secondInput);
             page.ClickGetTotal();

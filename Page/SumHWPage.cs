@@ -15,6 +15,14 @@ namespace PageObject.Page
         private IWebElement resultFromPage => Driver.FindElement(By.Id("displayvalue"));
         public SumHWPage(IWebDriver webdriver) : base(webdriver) { }
 
+        public void NavigateToPage()
+        {
+            if (Driver.Url != AddressUrl)
+            {
+                Driver.Url = AddressUrl;
+            }
+        }
+
         public void EnterFirstInput (string firstInput)
         {
             firstInputField.Clear();
